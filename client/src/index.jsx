@@ -37,6 +37,14 @@ class App extends React.Component {
     })
     .done((data) => {
       console.log('results:', data)
+      $.ajax({
+        method: 'GET',
+        url: '/repos'
+      }).done((data) => {
+        this.setState({
+          repos: data
+        })
+      });
     })
   }
 

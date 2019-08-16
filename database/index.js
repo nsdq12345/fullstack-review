@@ -17,7 +17,7 @@ let Repo = mongoose.model('Repo', repoSchema);
 let save = (data) => {
 
   var dataToLoad = {
-    url: data.url,
+    url: data.html_url,
     id: data.id,
     repoName: data.name,
     username: data.owner.login,

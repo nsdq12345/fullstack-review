@@ -22,9 +22,6 @@ const RepoList = (props) => (
         <td>
           Watcher Count
         </td>
-        <td>
-          URL
-        </td>
       </tr>
     {props.repos.map((data) => {
       return (<tr>
@@ -32,7 +29,7 @@ const RepoList = (props) => (
           <img src={data.pic} height="40" width="40"/>
         </td>
         <td>
-          {data.repoName}
+          <a href={data.url}>{data.repoName}</a>
         </td>
         <td>
           {data.username}
@@ -42,9 +39,6 @@ const RepoList = (props) => (
         </td>
         <td>
           {data.watcherCount}
-        </td>
-        <td>
-          {data.url}
         </td>
       </tr>);
     })}
